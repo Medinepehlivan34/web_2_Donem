@@ -1,0 +1,103 @@
+/* Arka plan alanı ve ortalama işlemi */
+.karsilama {
+  background: #fff0f0;          /* Açık pembe arka plan */
+  height: 350px;                /* Yükseklik */
+  display: flex;
+  align-items: center;          /* Dikey ortalama */
+  justify-content: center;      /* Yatay ortalama */
+  text-align: center;           /* Yazıları ortala */
+}
+
+/* İçeriği saran kutu */
+.icerik {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Başlık stili */
+.baslik {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Vurgulu kırmızı yazı */
+.kirmizi {
+  color: #dc3545;
+}
+
+/* Açıklama paragrafı */
+.aciklama {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Kırmızı buton */
+.dugme {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.card-img-top {
+  height: 200px;       /* Sabit yükseklik */
+  object-fit: cover;   /* Resmi kırparak kutuya sığdırır */
+  width: 100%;         /* Genişlik %100 */
+}
+.carousel-caption {
+  color: #fff; /* Beyaz yazı */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Siyah gölge */
+  background: rgba(0, 0, 0, 0.4); /* Yarı saydam koyu arka plan */
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 80%; /* Yazının genişliği, ihtiyaca göre ayarlanabilir */
+}
+footer {
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer-link {
+  color: #ddd;
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-link:hover {
+  color: #ff4d4d; /* Kırmızı ton hover */
+  text-decoration: underline;
+}
+.social-icon {
+  color: #ddd;
+  margin: 0 15px;
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icon:hover {
+  color: #ff4d4d;
+  transform: scale(1.2);
+}
+.btn-danger {
+  background-color: #ff3b3b;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.btn-danger:hover {
+  background-color: #e63232;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: inherit;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #dc3545; /* Kırmızı hover rengi */
+}

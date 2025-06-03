@@ -1,0 +1,1052 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Evcil Hayvan Sitesi</title>
+    <!-- Bootstrap ikonları ve CSS dosyaları -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css"> <!-- Özel stil dosyası -->
+    <!-- Lightbox2 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 
+        Bootstrap'in container sınıfı kullanıldı.
+        Container sayfa içeriğini ekran ortasında ve belirli bir max genişlikte tutar.
+        Böylece içerik çok geniş ekranlarda bile okunabilir kalır.
+      -->
+    
+      <header>
+        <!--
+          Sayfanın üst kısmını oluşturan alan.
+          Burada üst bilgi satırı, logo alanı ve navigasyon (menü) bulunuyor.
+        -->
+    
+        <!-- Üst Bilgi Satırı -->
+        <div class="container bg-light py-2">
+          <!--
+            İçeriğin genişliğini sınırlayan başka bir container.
+            bg-light: arka plan rengini açık gri yapar.
+            py-2: üst ve alt kenara padding (boşluk) ekler, 0.5rem * 2 = 1rem toplam boşluk.
+          -->
+    
+          <div class="row align-items-center justify-content-between">
+            <!--
+              Bootstrap grid sistemi row'u.
+              align-items-center: satır içindeki sütunları dikey olarak ortalar.
+              justify-content-between: sütunları yatayda sağ ve sola yaslar, arada boşluk bırakır.
+            -->
+    
+            <div class="col-auto">
+              <!--
+                col-auto: bu sütun içerdiği içeriğe göre genişlik alır, yani gereksiz boşluk olmaz.
+              -->
+    
+              <form class="d-flex" style="min-width: 280px; max-width: 400px;">
+                <!--
+                  Arama formu.
+                  d-flex: formun içindeki elemanlar (input, button) yatayda yan yana dizilir.
+                  min-width ve max-width: formun genişliği minimum 280px, maksimum 400px olur.
+                  Böylece çok küçük veya çok büyük ekranlarda formun genişliği kontrol altında.
+                -->
+    
+                <input type="text" class="form-control form-control-sm" placeholder="Aranacak Kelimeyi Yazın">
+                <!--
+                  Kullanıcıdan arama kelimesi almak için input.
+                  form-control: Bootstrap'in standart input stili.
+                  form-control-sm: inputu küçük boyut yapar.
+                  placeholder: kutu içinde kullanıcıya ne yazması gerektiği hakkında ipucu verir.
+                -->
+    
+                <button class="btn btn-sm btn-outline-dark ms-2" type="submit">
+                  <!--
+                    Küçük boyutlu (btn-sm), koyu renkli kenarlıklı (outline-dark) arama butonu.
+                    ms-2: butonun sol tarafına 0.5rem margin (boşluk) ekler, inputla aralarında mesafe olur.
+                    type="submit": buton formu gönderir.
+                  -->
+    
+                  <i class="bi bi-search"></i>
+                  <!--
+                    Bootstrap Icons kütüphanesinden arama simgesi (büyüteç) kullanıldı.
+                  -->
+                </button>
+              </form>
+            </div>
+    
+            <div class="col-auto">
+              <div class="d-flex align-items-center">
+                <!--
+                  Sosyal medya ikonları için yatayda esnek konteyner.
+                  align-items-center: ikonlar dikeyde ortalanır.
+                -->
+    
+                <!--
+                  Her ikon bir link (a) olarak tasarlandı,
+                  text-dark: koyu renkli yazı/ikon,
+                  me-3: sağ tarafına 1rem margin (boşluk) eklendi (sonuncuda yok),
+                  fs-5: font-size 1.25rem, yani ikon boyutu büyütüldü.
+                -->
+                <a href="#" class="text-dark me-3 fs-5"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark me-3 fs-5"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-dark me-3 fs-5"><i class="bi bi-pinterest"></i></a>
+                <a href="#" class="text-dark me-3 fs-5"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark fs-5"><i class="bi bi-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Logo Alanı -->
+        <div class="container-fluid logo-banner bg-light py-3 border-bottom">
+          <!--
+            container-fluid: genişliği ekran boyutuna göre %100 yapar.
+            logo-banner: özel stil için tanımlanmış CSS sınıfı olabilir.
+            bg-light: açık gri arka plan.
+            py-3: üst-alt 1rem padding.
+            border-bottom: altına ince bir çizgi ekler, alanı görsel olarak ayırır.
+          -->
+    
+          <div class="row">
+            <div class="col-12 text-center">
+              <!--
+                col-12: satırın tamamını kaplar,
+                text-center: içeriği yatayda ortalar.
+              -->
+    
+              <img src="res/logoo (4).png" alt="logo" height="200px">
+              <!--
+                Logo resmi.
+                height 200px olarak sabitlenmiş.
+                alt: resim yüklenmezse gösterilecek alternatif metin.
+              -->
+            </div>
+          </div>
+        </div>
+    
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+          <!--
+            Bootstrap navbar bileşeni.
+            navbar-expand-lg: büyük ekranlarda genişler, küçük ekranda daraltılır.
+            navbar-light: açık renkli navbar teması.
+            bg-light: açık arka plan rengi.
+            shadow-sm: hafif gölge efekti vererek yükseltilmiş görünüm sağlar.
+          -->
+    
+          <div class="container">
+            <!--
+              Navbar içeriği genişliğini sınırlar ve ortalar.
+            -->
+    
+            <a class="navbar-brand fw-bold text-danger" href="index.html">🐾 Petilife</a>
+            <!--
+              Site veya marka logosu/metni.
+              fw-bold: font-weight bold, yazıyı kalın yapar.
+              text-danger: kırmızı renk.
+              Linke tıklanınca anasayfaya gider.
+              Burada emoji ile küçük bir simge de eklendi.
+            -->
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Menüyü Aç">
+              <!--
+                Mobil görünümde menüyü açıp kapatmaya yarayan buton.
+                data-bs-toggle ve data-bs-target Bootstrap JavaScript bileşenleri için gerekli.
+                aria-* özellikleri erişilebilirlik için (ekran okuyucu gibi).
+              -->
+    
+              <span class="navbar-toggler-icon"></span>
+              <!--
+                Üç çizgiden oluşan hamburger menü simgesi.
+              -->
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+              <!--
+                Menü linklerinin bulunduğu alan.
+                collapse: mobilde gizlenir, toggler ile açılır.
+                justify-content-between: içerik aralıklı yerleşir.
+              -->
+    
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!--
+                  Menü linklerini listeleyen ul.
+                  me-auto: sağa iterek yanındaki form ve butonlar için yer bırakır.
+                  mb-2 ve mb-lg-0: alt margin ayarları, küçük ekranlarda biraz boşluk verir.
+                -->
+    
+                <li class="nav-item"><a class="nav-link active" href="index.html">Anasayfa</a></li>
+                <li class="nav-item"><a class="nav-link" href="magaza.html">Mağaza</a></li>
+                <li class="nav-item"><a class="nav-link" href="hakkımızda.html">Hakkımızda</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+              </ul>
+    
+              <form class="d-flex me-3" role="search">
+                <!--
+                  Navbar içindeki küçük arama formu.
+                  d-flex: form içeriği yatayda yan yana.
+                  me-3: sağ tarafta 1rem boşluk.
+                  role="search": erişilebilirlik için formun arama amaçlı olduğunu belirtir.
+                -->
+    
+                <input class="form-control form-control-sm me-2" type="search" placeholder="Ürün ara..." aria-label="Ara">
+                <!--
+                  Küçük boyutlu arama inputu.
+                  me-2: sağda 0.5rem boşluk.
+                  aria-label: ekran okuyucu için açıklama.
+                -->
+    
+                <button class="btn btn-outline-secondary btn-sm" type="submit">
+                  <!--
+                    Küçük, gri kenarlıklı arama butonu.
+                  -->
+    
+                  <i class="bi bi-search"></i>
+                  <!--
+                    Arama ikonu.
+                  -->
+                </button>
+              </form>
+    
+              <div class="d-flex align-items-center">
+                <!--
+                  Sepet ikonu ve giriş/kayıt butonlarının bulunduğu yatay flex konteyner.
+                  align-items-center: dikey ortalama sağlar.
+                -->
+    
+                <a href="#" class="btn btn-outline-dark me-3 position-relative">
+                  <!--
+                    Sepet butonu, koyu kenarlıklı.
+                    me-3: sağa 1rem boşluk verir.
+                    position-relative: içinde mutlak pozisyonlu rozet göstermek için.
+                  -->
+    
+                  <i class="bi bi-cart3"></i>
+                  <!--
+                    Sepet simgesi (Bootstrap Icon).
+                  -->
+    
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    2
+                    <!--
+                      Kırmızı yuvarlak rozet içinde sepetteki ürün sayısı.
+                      position-absolute: rozet butonun üzerinde konumlandırılır.
+                      top-0 ve start-100: rozet üst sağ köşeye yerleştirilir.
+                      translate-middle: tam köşeye hizalar.
+                    -->
+    
+                    <span class="visually-hidden">sepet öğesi</span>
+                    <!--
+                      Görsel olmayan metin: ekran okuyucular için.
+                      Böylece rozetin ne anlama geldiği anlaşılır.
+                    -->
+                  </span>
+                </a>
+    
+                <div>
+                  <!--
+                    Giriş yap ve kayıt ol butonlarının kapsayıcısı.
+                  -->
+    
+                  <a href="#" class="btn btn-outline-danger me-2">Giriş Yap</a>
+                  <!--
+                    Kırmızı kenarlıklı giriş butonu.
+                    me-2: sağa 0.5rem boşluk.
+                  -->
+    
+                  <a href="#" class="btn btn-danger">Kayıt Ol</a>
+                  <!--
+                    Dolu kırmızı renkte kayıt butonu,
+                    kullanıcıyı kayıt olmaya teşvik eder.
+                  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+
+    <main>
+<main>
+  <!-- Ana sayfanın ana içerik alanı başlıyor -->
+
+  <div class="container-fluid bg-danger text-white text-center py-4 mb-5">
+    <!-- 
+      container-fluid: Tam genişlikte, ekran boyunca uzanan bir konteyner. 
+      bg-danger: Bootstrap'ın kırmızı arka plan rengi, dikkat çekici bir alan oluşturur. 
+      text-white: Yazılar beyaz renk olur, kırmızı arka planda okunabilirliği artırır.
+      text-center: Metinler yatayda ortalanır.
+      py-4: Dikey yönde padding (iç boşluk) üst ve alt olmak üzere 1.5rem.
+      mb-5: Alt tarafta margin (dış boşluk) 3rem, altındaki içerikle mesafe bırakır.
+    -->
+    <h2 class="fw-bold mb-2">
+      <!--
+        fw-bold: Yazı kalın (bold font-weight).
+        mb-2: Alt boşluk 0.5rem, başlık ile altındaki paragraf arasında boşluk bırakır.
+      -->
+      Yaz İndirimi Başladı! Tüm Mama ve Aksesuarlarda %20 İndirim
+    </h2>
+
+    <p>
+      <!--
+        Normal paragraf, ekstra sınıf yok, sadece bilgilendirici metin.
+      -->
+      Fırsatları kaçırmayın, stoklarla sınırlıdır.
+    </p>
+
+    <a href="magaza.html" class="btn btn-light btn-lg mt-3">
+      <!--
+        btn: Bootstrap buton stili verir.
+        btn-light: Açık renk (beyaz/aydınlık) buton görünümü sağlar.
+        btn-lg: Büyük boyutlu buton.
+        mt-3: Üst tarafta 1rem boşluk, paragraf ile buton arasında mesafe bırakır.
+      -->
+      Şimdi Alışverişe Başla
+    </a>
+  </div>
+
+  <!-- Karşılama alanı başlangıcı -->
+  <div class="karsilama alani d-flex align-items-center text-center">
+    <!-- 
+      karsilama alani: özel CSS sınıfı, stil dosyasında tanımlanmış olabilir. 
+      d-flex: Flexbox ile esnek kutu modeli kullanımı. 
+      align-items-center: Flex kutusu içeriği dikeyde ortalar.
+      text-center: Metni yatayda ortalar.
+    -->
+    <div class="icerik">
+      <!--
+        icerik: Özel stil verilen içerik kutusu. Metin burada yer alır.
+      -->
+      <h1 class="baslik fw-bold text-dark">
+        <!--
+          baslik: Özel başlık stili, CSS dosyasında tanımlı olabilir.
+          fw-bold: Yazı kalın.
+          text-dark: Yazı rengi koyu (genellikle siyah veya koyu gri).
+        -->
+        Evcil Dostunuz İçin <span class="kirmizi">En İyisi</span> Burada!
+        <!--
+          span.kirmizi: 'kirmizi' adlı özel CSS sınıfı, genelde kırmızı renk verir.
+          Burada 'En İyisi' kelimesi kırmızı vurgulanmak için kullanılmış.
+        -->
+      </h1>
+
+      <p class="aciklama">
+        <!--
+          aciklama: özel CSS sınıfı, paragraf için stil verilir (örneğin font boyutu veya renk).
+        -->
+        Kaliteli ürünler, güvenilir hizmet ve sevgi dolu bir topluluk seni bekliyor.
+      </p>
+
+      <a href="index.html" class="dugme">
+        <!--
+          dugme: özel CSS buton sınıfı, stil dosyasında tanımlanmış.
+          Bootstrap değil, kendi tasarımına özgü olabilir.
+        -->
+        Mağazayı Keşfet
+      </a>
+    </div>
+  </div>
+
+  <!-- Yeni ve Popüler Ürünler Carousel Başlangıcı -->
+  <div class="container py-3 bg-white">
+    <!--
+      container: Bootstrap standart container, ekran genişliğine göre kenar boşlukları ile içerik ortalanır.
+      py-3: Dikeyde üst ve alt padding 1rem.
+      bg-white: Arka plan beyaz yapar.
+    -->
+    <h2 class="text-center fw-bold mb-4">
+      <!--
+        text-center: Metni ortalar.
+        fw-bold: Yazı kalın.
+        mb-4: Alt boşluk 1.5rem.
+      -->
+      Yeni ve Popüler Ürünler
+    </h2>
+
+    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!--
+        carousel slide: Bootstrap carousel (kaydırıcı) bileşeni, slide animasyonuyla.
+        id="productCarousel": JavaScript ile erişim için kimlik ataması.
+        data-bs-ride="carousel": Otomatik kaydırma aktif.
+      -->
+      <div class="carousel-inner">
+        <!--
+          carousel-inner: Bootstrap carousel içeriğinin ana kapsayıcısı.
+          İçeride her bir .carousel-item bir kaydırıcı öğesidir.
+        -->
+
+        <div class="carousel-item active text-center">
+          <!--
+            carousel-item: Kaydırıcıdaki tek bir slayt.
+            active: İlk açılışta görünmesi için aktif slayt.
+            text-center: İçerik ortalanır.
+          -->
+          <img src="res/c1.jpg" class="d-block mx-auto" alt="Ürün 1" width="100%" height="600px">
+          <!--
+            d-block: Görseli blok eleman yapar.
+            mx-auto: Yatayda otomatik margin, görsel ortalanır.
+            alt: Görsel erişilebilirliği için açıklama.
+            width="100%": Görsel yatayda konteyner genişliğini kaplar.
+            height="600px": Yükseklik sabit 600 piksel.
+          -->
+
+          <div class="carousel-caption d-none d-md-block">
+            <!--
+              carousel-caption: Kaydırıcıdaki resim üzerine metin kutusu.
+              d-none d-md-block: Küçük ekranlarda gizle, orta ve üstü ekranlarda göster.
+            -->
+            <h5>Rahat Tasma</h5>
+            <p>Konforlu ve dayanıklı tasma çeşitleri</p>
+          </div>
+        </div>
+
+        <!-- Diğer carousel-item'lar aynı yapıda, resim ve başlık açıklama içerir -->
+
+        <div class="carousel-item text-center">
+          <img src="res/c2.jpg" class="d-block mx-auto" alt="Ürün 2" width="100%" height="600px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Organik Kedi Maması</h5>
+            <p>Sağlıklı ve doğal içerikler</p>
+          </div>
+        </div>
+
+        <div class="carousel-item text-center">
+          <img src="res/c3.jpg" class="d-block mx-auto" alt="Ürün 3" width="100%" height="600px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Evcil Hayvan Yatağı</h5>
+            <p>Yumuşak ve şık tasarımlar</p>
+          </div>
+        </div>
+
+        <div class="carousel-item text-center">
+          <img src="res/c4.jpg" class="d-block mx-auto" alt="Ürün 4" width="100%" height="600px">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Evcil Hayvan Yatağı</h5>
+            <p>Kaliteli Ürünler</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel kontrol butonları -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+        <!--
+          carousel-control-prev: Önceki slayta geçmek için buton.
+          data-bs-target: Hangi carousel'u kontrol edeceği.
+          data-bs-slide: slide (kaydır) yönü prev (önceki).
+        -->
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <!--
+          Görsel ok işareti simgesi, erişilebilirlik için aria-hidden true.
+        -->
+        <span class="visually-hidden">Önceki</span>
+        <!--
+          Ekran okuyucular için görünen metin.
+        -->
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+        <!--
+          carousel-control-next: Sonraki slayta geçmek için buton.
+          data-bs-target: Carousel id'si.
+          data-bs-slide: next (sonraki) yönü.
+        -->
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Sonraki</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Ürün Kartları Bölümü -->
+  <div class="container py-5 bg-white">
+    <!--
+      container: Standart responsive container, kenar boşluklu.
+      py-5: Dikeyde üst ve alt padding 3rem, bol nefes alan içerik için.
+      bg-white: Arka plan beyaz.
+    -->
+    <h2 class="text-center mb-4 fw-bold">
+      <!--
+        text-center: Metin ortalanır.
+        mb-4: Alt boşluk 1.5rem.
+        fw-bold: Kalın yazı.
+      -->
+      Evcil Dostlar İçin: Ürün Seçenekleri ve Çeşitleri
+    </h2>
+
+    <div class="row justify-content-center g-4">
+      <!--
+        row: Bootstrap grid satırı, içinde sütunlar olur.
+        justify-content-center: Sütunlar yatayda ortalanır.
+        g-4: Grid gap, sütunlar arası hem dikey hem yatay boşluk 1.5rem.
+      -->
+
+      <!-- Ürün kartları 4 sütunlu düzen -->
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <!--
+          col-sm-6: Küçük ekranlarda 6 birim (12 birimden yarı genişlik)
+          col-md-4: Orta ekranlarda 4 birim (12 birimden 1/3)
+          col-lg-3: Büyük ekranlarda 3 birim (12 birimden 1/4)
+          Böylece responsive (duyarlı) sütun düzeni oluşturur.
+        -->
+        <div class="card h-100 shadow-sm">
+          <!--
+            card: Bootstrap kart bileşeni, kutu görünümü sağlar.
+            h-100: Yükseklik %100, sütunun yüksekliğini doldurur.
+            shadow-sm: Hafif gölge efekti.
+          -->
+          <img src="res/aksesuar.jpg" class="card-img-top" alt="Aksesuarlar">
+          <!--
+            card-img-top: Kartın üst kısmına yerleşen görsel.
+            alt: Görselin açıklaması, erişilebilirlik için.
+          -->
+          <div class="card-body text-center">
+            <!--
+              card-body: Kart içeriğinin gövdesi.
+              text-center: İçerik ortalanır.
+            -->
+            <h5 class="card-title">Aksesuarlar</h5>
+            <!--
+              card-title: Kart başlığı.
+            -->
+            <p class="card-text">Tasma, oyuncak ve kıyafetler.</p>
+            <!--
+              card-text: Kart açıklama metni.
+            -->
+            <a href="#" class="btn btn-danger btn-sm">İncele</a>
+            <!--
+              btn: Bootstrap buton stili.
+              btn-danger: Kırmızı buton.
+              btn-sm: Küçük boyutlu buton.
+            -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Diğer ürün kartları benzer yapıda, sadece içerik ve resim değişir -->
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="res/mamavebeslenme.jpg" class="card-img-top" alt="Mama ve Beslenme">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mama ve Beslenme</h5>
+            <p class="card-text">Sağlıklı ve doğal mama çeşitleri.</p>
+            <a href="#" class="btn btn-danger btn-sm">İncele</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="res/bakım.jpg" class="card-img-top" alt="Bakım & Hijyen">
+          <div class="card-body text-center">
+            <h5 class="card-title">Bakım & Hijyen</h5>
+            <p class="card-text">Tüy bakımı, temizlik ve sağlık ürünleri.</p>
+            <a href="#" class="btn btn-danger btn-sm">İncele</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="res/akvaryum.jpg" class="card-img-top" alt="Akvaryum Ürünleri">
+          <div class="card-body text-center">
+            <h5 class="card-title">Akvaryum Ürünleri</h5>
+            <p class="card-text">Balık yemleri, filtreler ve dekorlar.</p>
+            <a href="#" class="btn btn-danger btn-sm">İncele</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      <!-- Lightbox Galeri -->
+<div class="container py-2">
+  <!-- 
+    container: Bootstrap container, içerik ekran genişliğine göre ortalanır ve yanlarda boşluk bırakır.
+    py-2: Dikeyde padding üst-alt 0.5rem, galeriye biraz nefes alan boşluk verir.
+  -->
+  <h2 class="text-center mb-4 fw-bold">Galeri</h2>
+  <!-- 
+    text-center: Başlığı yatayda ortalar.
+    mb-4: Alt boşluk 1.5rem, başlık ile galerinin arasına mesafe koyar.
+    fw-bold: Kalın font ağırlığı, başlık belirgin olur.
+  -->
+
+  <div class="row g-3 justify-content-center">
+    <!--
+      row: Bootstrap grid satırı, içinde sütunlar (col) yer alır.
+      g-3: Grid gap, hem dikey hem yatayda 1rem boşluk bırakır sütunlar arasında.
+      justify-content-center: Sütunlar yatayda ortalanır.
+    -->
+
+    <div class="col-6 col-md-2">
+      <!--
+        col-6: Küçük ekranlarda 12 birimden 6’sı (yani yarısı) genişlikte.
+        col-md-2: Orta ve üzeri ekranlarda 12 birimden 2’si (1/6) genişlikte.
+        Böylece responsive tasarımda görseller uygun büyüklükte görünür.
+      -->
+      <a href="res/R1.jpg" data-lightbox="gallery" data-title="Aksesuarlar">
+        <!-- 
+          <a> etiketi galerideki görselin büyük versiyonunu açmak için kullanılır.
+          href: Açılacak büyük resim URL’si.
+          data-lightbox="gallery": Lightbox eklentisine bu linkin galeride olduğunu bildirir.
+          data-title: Lightbox penceresinde gösterilecek başlık.
+        -->
+        <img src="res/R1.jpg" alt="Aksesuarlar" class="img-fluid rounded shadow">
+        <!-- 
+          img-fluid: Resmin genişliği bulunduğu konteyneri aşmadan responsive şekilde ayarlanır.
+          rounded: Köşeler hafif yuvarlatılır, daha yumuşak görünüm için.
+          shadow: Hafif gölge efekti verir, görsel öne çıkar.
+          alt: Görselin açıklaması, erişilebilirlik ve SEO için önemli.
+        -->
+      </a>
+    </div>
+
+    <!-- Aynı yapıdaki diğer görseller: col-6 col-md-2, link ve resim aynı şekilde düzenlenmiş -->
+    <div class="col-6 col-md-2">
+      <a href="res/R2.jpg" data-lightbox="gallery" data-title="Mama ve Beslenme">
+        <img src="res/R2.jpg" alt="Mama ve Beslenme" class="img-fluid rounded shadow">
+      </a>
+    </div>
+    <div class="col-6 col-md-2">
+      <a href="res/R7.jpg" data-lightbox="gallery" data-title="Bakım & Hijyen">
+        <img src="res/R7.jpg" alt="Bakım & Hijyen" class="img-fluid rounded shadow">
+      </a>
+    </div>
+    <div class="col-6 col-md-2">
+      <a href="res/R8.jpg" data-lightbox="gallery" data-title="Akvaryum Ürünleri">
+        <img src="res/R8.jpg" alt="Akvaryum Ürünleri" class="img-fluid rounded shadow">
+      </a>
+    </div>
+    <div class="col-6 col-md-2">
+      <a href="res/R5.jpg" data-lightbox="gallery" data-title="Akvaryum Ürünleri">
+        <img src="res/R5.jpg" alt="Akvaryum Ürünleri" class="img-fluid rounded shadow">
+      </a>
+    </div>
+    <div class="col-6 col-md-2">
+      <a href="res/R6.jpg" data-lightbox="gallery" data-title="Akvaryum Ürünleri">
+        <img src="res/R6.jpg" alt="Akvaryum Ürünleri" class="img-fluid rounded shadow">
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Owl Carousel -->
+<div class="container py-5">
+  <!-- 
+    container: Bootstrap konteyner, içerik ortalanır.
+    py-5: Dikeyde üst-alt padding 3rem, carousel alanına genişlik ve boşluk verir.
+  -->
+  <h2 class="text-center mb-4 fw-bold">Popüler Ürünler</h2>
+  <!-- 
+    text-center: Başlık ortalanır.
+    mb-4: Başlık ile carousel arasında 1.5rem alt boşluk bırakır.
+    fw-bold: Kalın yazı tipi ile dikkat çekici başlık.
+  -->
+
+  <div id="example-carousel" class="owl-carousel owl-theme">
+    <!--
+      id="example-carousel": JavaScript ile hedef almak için kimlik.
+      owl-carousel: Owl Carousel kütüphanesinin temel sınıfı, carousel olarak davranır.
+      owl-theme: Owl Carousel teması, stil ve geçiş efektleri için.
+    -->
+
+    <div class="item">
+      <!--
+        item: Owl Carousel'de her slaytı temsil eder.
+      -->
+      <img src="res/L1.jpg" alt="L1" class="img-fluid rounded">
+      <!--
+        img-fluid: Resim responsive, konteyneri aşmadan boyutlanır.
+        rounded: Köşeleri hafif yuvarlatır.
+        alt: Görselin açıklaması, erişilebilirlik için.
+      -->
+    </div>
+
+    <!-- Diğer carousel item'lar aynı yapıda: sadece görsel ve alt metin farklı -->
+    <div class="item"><img src="res/L2.jpg" alt="L2" class="img-fluid rounded"></div>
+    <div class="item"><img src="res/L3.jpg" alt="L3" class="img-fluid rounded"></div>
+    <div class="item"><img src="res/L4.jpg" alt="L4" class="img-fluid rounded"></div>
+    <div class="item"><img src="res/L5.jpg" alt="L5" class="img-fluid rounded"></div>
+    <div class="item"><img src="res/L6.jpg" alt="L6" class="img-fluid rounded"></div>
+    <div class="item"><img src="res/L7.jpg" alt="L7" class="img-fluid rounded"></div>
+    <div class="item"><img src="res/L8.jpg" alt="L8" class="img-fluid rounded"></div>
+    <div class="item"><img src="res/L9.jpg" alt="L9" class="img-fluid rounded"></div>
+    <div class="item"><img src="res/L10.jpg" alt="L10" class="img-fluid rounded"></div>
+  </div>
+</div>
+
+      
+
+    <!-- Hizmetlerimiz -->
+<div class="container py-5 bg-light">
+  <!--
+    container: Sayfa içeriğini ortalamak ve sağdan soldan padding vermek için Bootstrap konteyneri.
+    py-5: Dikeyde (üst-alt) padding 3rem (çok boşluk) — bölüme nefes aldırmak için.
+    bg-light: Açık renkli arka plan (genellikle açık gri), içerikleri arka plandan ayırmak için.
+  -->
+
+  <h2 class="text-center mb-4 fw-bold">Hizmetlerimiz</h2>
+  <!--
+    text-center: Başlığı yatayda ortalar.
+    mb-4: Başlık altına 1.5rem boşluk koyar.
+    fw-bold: Font-weight kalın yapar, başlığı vurgular.
+  -->
+
+  <div class="row g-4 text-center">
+    <!--
+      row: Bootstrap grid satırı, içinde sütunlar var.
+      g-4: Grid gap olarak 1.5rem hem dikey hem yatay boşluk verir.
+      text-center: Bu row içindeki metinleri yatayda ortalar.
+    -->
+
+    <div class="col-md-4">
+      <!--
+        col-md-4: Orta ve üzeri ekranlarda 12 birimlik gridin 4 birimini kaplar (3 eşit sütun yapar).
+        Küçük ekranlarda otomatik alt alta sıralanır.
+      -->
+
+      <div class="p-4 shadow-sm bg-white rounded h-100">
+        <!--
+          p-4: İçerik etrafına 1.5rem padding (nefes alan boşluk).
+          shadow-sm: Hafif gölge efekti verir, kutu hafifçe öne çıkar.
+          bg-white: Beyaz arka plan.
+          rounded: Köşeler hafif yuvarlatılmış.
+          h-100: Bulunduğu sütunun yüksekliğini tam kaplar (tüm sütun eşit yükseklikte görünür).
+        -->
+
+        <i class="bi bi-heart-pulse fs-1 text-danger mb-3"></i>
+        <!--
+          i: Bootstrap Icons kullanımı için ikon etiketi.
+          bi bi-heart-pulse: Kalp atışı ikonunun sınıfları (Bootstrap Icons).
+          fs-1: Font size 1, büyük ikon boyutu (yaklaşık 2.5rem).
+          text-danger: Kırmızı renk (dikkat çekmek için).
+          mb-3: İkon ile başlık arasına 1rem alt boşluk koyar.
+        -->
+
+        <h5 class="fw-bold">Veteriner Hizmeti</h5>
+        <!--
+          fw-bold: Kalın yazı tipi, başlık vurgusu.
+        -->
+
+        <p>Alanında uzman veterinerlerle sağlık kontrolleri ve tedaviler.</p>
+        <!--
+          Açıklama metni, hizmetin ne olduğu kullanıcıya anlatılır.
+        -->
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="p-4 shadow-sm bg-white rounded h-100">
+        <i class="bi bi-scissors fs-1 text-danger mb-3"></i>
+        <h5 class="fw-bold">Pet Kuaför</h5>
+        <p>Tüy bakımı, yıkama ve güzellik hizmetleri ile evcil dostlarınız daha mutlu.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="p-4 shadow-sm bg-white rounded h-100">
+        <i class="bi bi-book fs-1 text-danger mb-3"></i>
+        <h5 class="fw-bold">Eğitim Desteği</h5>
+        <p>Tuvalet eğitimi, temel komutlar ve davranış geliştirme kursları.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container py-5 bg-light">
+  <!--
+    Aynı container yapısı, arka plan yine açık renk.
+    Bu sefer Evcil Hayvan Bakımı için ipuçları bölümü.
+  -->
+
+  <h2 class="text-center fw-bold mb-4">Evcil Hayvan Bakımı İçin İpuçları</h2>
+  <div class="row g-4">
+    <!--
+      Row ve grid gap 1.5rem, bu sefer metin ortalanmamış (text-center yok).
+    -->
+
+    <div class="col-md-4">
+      <div class="p-3 bg-white rounded shadow">
+        <!--
+          p-3: 1rem padding, biraz daha az boşluk önceki bölüme göre.
+          bg-white: Beyaz arka plan.
+          rounded: Hafif yuvarlak köşeler.
+          shadow: Kutunun etrafında hafif gölge.
+        -->
+        <h5 class="fw-semibold">Düzenli Veteriner Kontrolleri</h5>
+        <!--
+          fw-semibold: Orta kalınlıkta font, başlık biraz vurgulanmış.
+        -->
+        <p>Evcil hayvanınızın sağlığını korumak için düzenli sağlık kontrolleri şarttır.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="p-3 bg-white rounded shadow">
+        <h5 class="fw-semibold">Doğru Beslenme</h5>
+        <p>Yaşına, cinsine uygun mama seçimi ile sağlıklı büyümesini destekleyin.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="p-3 bg-white rounded shadow">
+        <h5 class="fw-semibold">Aktif Oyun ve Egzersiz</h5>
+        <p>Enerjisini atması ve mutlu olması için düzenli egzersiz önemlidir.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Müşteri Yorumları -->
+<div class="container py-5">
+  <!--
+    container: İçeriği ortalar.
+    py-5: Dikeyde geniş boşluk.
+  -->
+
+  <h2 class="text-center mb-4 fw-bold">Müşteri Yorumları</h2>
+  <div class="row justify-content-center g-4">
+    <!--
+      row: Bootstrap grid satırı.
+      justify-content-center: İçerikler yatayda ortalanır.
+      g-4: Grid boşluk 1.5rem.
+    -->
+
+    <div class="col-md-6 col-lg-4">
+      <!--
+        col-md-6: Orta ekranlarda yarı genişlikte.
+        col-lg-4: Büyük ekranlarda üçte bir genişlikte.
+        Responsive tasarım için farklı ekranlara uyum sağlar.
+      -->
+
+      <div class="card h-100 shadow-sm">
+        <!--
+          card: Bootstrap kart komponenti, kutu şeklinde şık görünüm.
+          h-100: Kart yüksekliği tam sütun yüksekliği kadar.
+          shadow-sm: Hafif gölge efekti.
+        -->
+
+        <div class="card-body">
+          <!-- Kartın içeriği -->
+          <p class="card-text">"Petilife sayesinde minik köpeğim her zaman sağlıklı ve mutlu. Hizmet kalitesi harika!"</p>
+          <!--
+            card-text: Kart içinde metin.
+          -->
+          <h6 class="card-subtitle text-muted text-end">– Ayşe K.</h6>
+          <!--
+            card-subtitle: Alttaki isim ve unvan gibi ek bilgi için.
+            text-muted: Renk olarak soluk gri, metni vurgulamadan gösterir.
+            text-end: Yazıyı sağa yaslar.
+          -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <p class="card-text">"Kargo hızlı geldi, ürünler tam anlatıldığı gibi. Pet kuaför deneyimimiz de çok iyiydi."</p>
+          <h6 class="card-subtitle text-muted text-end">– Mehmet T.</h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <p class="card-text">"Siteniz çok kullanışlı. Evcil hayvanım için aradığım her şeyi buldum. Teşekkürler!"</p>
+          <h6 class="card-subtitle text-muted text-end">– Elif B.</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+    </main>
+
+   <footer class="bg-dark text-light pt-5 pb-4">
+  <!--
+    footer: Sayfanın alt kısmı, genellikle sabit veya sayfa sonunda yer alır.
+    bg-dark: Koyu arka plan (siyah-gri tonları).
+    text-light: Metin rengini açık (beyaz) yapar, koyu arka plana kontrast için.
+    pt-5 pb-4: Üstten 3rem, alttan 1.5rem padding (boşluk).
+  -->
+
+  <div class="container">
+    <!-- Sayfa genişliğine göre içerik ortalanır ve padding eklenir -->
+
+    <div class="row text-center text-md-start mb-4">
+      <!--
+        row: Bootstrap grid satırı.
+        text-center: Küçük ekranlarda tüm içerik ortalanır.
+        text-md-start: Orta ve üzeri ekranlarda metin sola hizalanır.
+        mb-4: Altına 1.5rem boşluk.
+      -->
+
+      <!-- 1. Sütun: Linkler -->
+      <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex flex-column justify-content-center">
+        <!--
+          col-12: Küçük ekranlarda tam genişlik.
+          col-md-4: Orta ekran ve üzeri 3 sütundan biri.
+          mb-4: Küçük ekranlarda alt boşluk.
+          mb-md-0: Orta ve üzeri ekranlarda alt boşluk kaldırılır.
+          d-flex flex-column justify-content-center: Flexbox ile sütun içeriği dikeyde ortalanır.
+        -->
+
+        <nav>
+          <a href="/hakkimizda" class="footer-link">Hakkımızda</a>
+          <a href="/gizlilik-politikasi" class="footer-link">Gizlilik Politikası</a>
+          <a href="/kullanim-kosullari" class="footer-link">Kullanım Koşulları</a>
+          <!--
+            footer-link: Muhtemelen özel CSS ile linklere stil verilmiş.
+            Bu linkler footer içi sayfa içi ya da site dışı sayfaya yönlendirir.
+          -->
+        </nav>
+      </div>
+
+      <!-- 2. Sütun: Sosyal Medya İkonları -->
+      <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex justify-content-center align-items-center">
+        <!--
+          col-12 / col-md-4: Responsive sütun genişliği.
+          mb-4 / mb-md-0: Alt boşluk, sadece küçük ekranlarda.
+          d-flex: Flexbox aktif.
+          justify-content-center: Yatayda ortalar.
+          align-items-center: Dikeyde ortalar.
+        -->
+
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="social-icon">
+          <i class="bi bi-facebook"></i>
+          <!-- Facebook ikonu Bootstrap Icons'tan -->
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter" class="social-icon">
+          <i class="bi bi-twitter"></i>
+          <!-- Twitter ikonu -->
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-icon">
+          <i class="bi bi-instagram"></i>
+          <!-- Instagram ikonu -->
+        </a>
+      </div>
+
+      <!-- 3. Sütun: Abonelik Formu -->
+      <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start align-items-center">
+        <!--
+          Responsive sütun genişliği.
+          Küçük ekranda form yatayda ortalanır.
+          Orta ve üzeri ekranda sola yaslanır.
+          Dikeyde ortalanır.
+        -->
+
+        <form action="/abonelik" method="post" class="d-flex gap-2 flex-wrap justify-content-center justify-content-md-start align-items-center w-100">
+          <!--
+            form: Abonelik için post methodu.
+            d-flex: Flexbox.
+            gap-2: Elemanlar arasında 0.5rem boşluk.
+            flex-wrap: Ekran küçükse elemanlar alt satıra kayar.
+            justify-content-center / justify-content-md-start: Küçük ekranda ortala, büyük ekranda sola yasla.
+            align-items-center: Dikey ortalama.
+            w-100: Form genişliği yüzde yüz (bulunduğu alanı kapla).
+          -->
+
+          <label for="email" class="form-label mb-0 me-2 fw-semibold text-nowrap">Bültenimize abone olun!</label>
+          <!--
+            form-label: Bootstrap form etiketi.
+            mb-0: Alt boşluk sıfır.
+            me-2: Sağda 0.5rem boşluk.
+            fw-semibold: Orta kalınlık yazı.
+            text-nowrap: Etikette satır kırma yok, tek satır.
+          -->
+
+          <input type="email" id="email" name="email" class="form-control rounded-pill px-3 py-2 flex-grow-1" placeholder="E-posta adresiniz" required>
+          <!--
+            form-control: Bootstrap form input stili.
+            rounded-pill: Yuvarlak uçlu input kutusu.
+            px-3 py-2: Yatayda 1rem, dikeyde 0.5rem padding.
+            flex-grow-1: Boş kalan alanı kapla, genişler.
+            placeholder: Yer tutucu metin.
+            required: Boş bırakılmaz, zorunlu alan.
+          -->
+
+          <button type="submit" class="btn btn-danger rounded-pill px-4 py-2 shadow-sm">Abone Ol</button>
+          <!--
+            btn btn-danger: Kırmızı buton Bootstrap stili.
+            rounded-pill: Yuvarlak buton.
+            px-4 py-2: İç boşluk (butonu büyütür).
+            shadow-sm: Hafif gölge efekti.
+          -->
+        </form>
+      </div>
+
+      <!-- Yeni Satır: Telif Hakkı -->
+      <div class="col-12 mt-4 text-center small" style="color:#f8f9fa;">
+        &copy; 2024 Petilife | Tüm hakları saklıdır.
+        <!--
+          col-12: Tam genişlik.
+          mt-4: Üstte 1.5rem boşluk.
+          text-center: Ortalanmış metin.
+          small: Yazı küçültülmüş.
+          style inline: Açık renk metin rengi verilmiş (#f8f9fa).
+        -->
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- JS Bölümü -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<!--
+  Bootstrap’in JS ve Popper.js paketini içerir.
+  Dropdown, modal vb. bileşenlerin çalışması için.
+-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- jQuery kütüphanesi, birçok eklenti ve JS fonksiyonu için -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js"></script>
+<!--
+  Lightbox eklentisi, galeri veya resim üzerine tıklayınca büyük gösterim için.
+-->
+
+<script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+<!--
+  Owl Carousel eklentisi, responsive ve dokunmatik destekli slider/carousel yapmak için.
+-->
+
+<script>
+  $(document).ready(function(){
+    $('#kiralik-carousel, #satilik-carousel').owlCarousel({
+      loop: true,         // Sonsuz döngü
+      margin: 10,         // Slaytlar arası boşluk (px)
+      responsive: {
+        0: { items: 2 },  // 0px ve üstünde 2 slayt göster
+        768: { items: 4 } // 768px ve üstünde 4 slayt göster
+      }
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function(){
+    $('#example-carousel').owlCarousel({
+      loop: true,              // Sonsuz döngü
+      margin: 10,              // Slaytlar arası boşluk
+      autoplay: true,          // Otomatik slayt geçişi
+      autoplayTimeout: 3000,   // 3 saniyede bir geçiş
+      autoplayHoverPause: true,// Fare ile üzerine gelince duraklat
+      responsive: {
+        0: { items: 1 },       // 0px ve üstünde 1 slayt
+        600: { items: 2 },     // 600px ve üstünde 2 slayt
+        1000: { items: 3 }     // 1000px ve üstünde 3 slayt
+      }
+    });
+  });
+</script>
+
+
